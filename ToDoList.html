@@ -1,19 +1,30 @@
 <html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-    <head>
-        <script type="text/javascript" src="js/funcoes.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+  <body>
+    <form name="minhaAgenda">
+        <input type="text" name="itemDaAgenda">
+        <input type="button" value="Adicionar" onclick="processarForm()">
+    </form>
 
-    <body>
+    <div id="preDefinido1">
+      <input type="checkbox" onclick="riscar('preDefinido1')" />Marcar Dentista
+    </div>
 
-        <form name="minhaAgenda">
-            <input type="text" name="itemDaAgenda">
-            <input type="button" value="Adicionar" onclick="processForm()">
-        </form>
+    <div id="preDefinido2">
+      <input type="checkbox" onclick="riscar('preDefinido2')" />Terminar exercícios de métodos
+    </div>
 
-        <div id="agenda"></div>
+    <div id="preDefinido3">
+      <input type="checkbox" onclick="riscar('preDefinido3')" />Ligar para Ana
+    </div>
 
-    </body>
+    <div id="agenda"></div>
+
+  </body>
 
 </html>
