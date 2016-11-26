@@ -1,30 +1,40 @@
-<html>
+<!doctype html>
+<html lang="pt-br" ng-app="agenda">
   <head>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="js/funcoes.js"></script>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
-    <form name="minhaAgenda">
-        <input type="text" name="itemDaAgenda">
-        <input type="button" value="Adicionar" onclick="processarForm()">
-    </form>
 
-    <div id="preDefinido1">
-      <input type="checkbox" onclick="riscar('preDefinido1')" />Marcar Dentista
-    </div>
+	<div ng-controller="agendaController" style="width: 500px;">
+		<form name="frm-list" ng-submit="addItem()">
+			<input type="text" ng-model="itemDaAgenda" name="itemDaAgenda"/>
+			<button ng-disabled="frm-list.$invalid">Adicionar tarefa</button>
+		</form>
 
-    <div id="preDefinido2">
-      <input type="checkbox" onclick="riscar('preDefinido2')" />Terminar exercícios de métodos
-    </div>
+		<ul>
+			<li ng-repeat="tarefa in tarefas">
+				<input type="checkbox" ng-model="tarefa.done" />
+				<span class="marcado-{{tarefa.done}}" ng-class="{'done':todo.done}">{{tarefa.title}}</span>
+				<button ng-click="removeTarefa()">remover tarefa</button>
+			</li>
+		</ul>
 
-    <div id="preDefinido3">
-      <input type="checkbox" onclick="riscar('preDefinido3')" />Ligar para Ana
-    </div>
+		<p class="texto-status">Você possui {{tarefas.length}} tarefas cadastradas.</p>
+		<p class="texto-status">Você possui {{StatusTarefas()}} tarefas pendentes.</p>
 
-    <div id="agenda"></div>
 
+		<hr />
+		<a href="javascript:mudaCorTexto('.texto-status')">Mudar cor do texto do status</a><br />
+		<a href="javascript:restaurarCorTexto('.texto-status')">Restaurar cor </a>
+
+	</div>
+
+
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/app.js"></script>
   </body>
 
 </html>
