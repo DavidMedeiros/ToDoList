@@ -5,28 +5,23 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
+    <h1>Agenda de Tarefas</h1>
 	<div ng-controller="agendaController" style="width: 500px;">
-		<form name="frm-list" ng-submit="addItem()">
-			<input type="text" ng-model="itemDaAgenda" name="itemDaAgenda"/>
-			<button ng-disabled="frm-list.$invalid">Adicionar tarefa</button>
+		<form id="form" name="frm-list" ng-submit="addItem()">
+			<input class="campo" type="text" ng-model="itemDaAgenda" name="itemDaAgenda"/>
+			<p class="botaoAdiciona" ng-click="addItem()">Adicionar Tarefa</p>
 		</form>
 
 		<ul>
 			<li ng-repeat="tarefa in tarefas">
 				<input type="checkbox" ng-model="tarefa.done" />
 				<span class="marcado-{{tarefa.done}}" ng-class="{'done':todo.done}">{{tarefa.title}}</span>
-				<button ng-click="removeTarefa()">remover tarefa</button>
+				<p class="botaoRemove" ng-click="removeTarefa()">x</p>
 			</li>
 		</ul>
 
 		<p class="texto-status">Você possui {{tarefas.length}} tarefas cadastradas.</p>
 		<p class="texto-status">Você possui {{StatusTarefas()}} tarefas pendentes.</p>
-
-
-		<hr />
-		<a href="javascript:mudaCorTexto('.texto-status')">Mudar cor do texto do status</a><br />
-		<a href="javascript:restaurarCorTexto('.texto-status')">Restaurar cor </a>
 
 	</div>
 

@@ -5,7 +5,7 @@ controller('agendaController', ['$scope', function($scope){
 	//tarefas pré-definidas
 	$scope.tarefas = [
 		{'title': 'Marcar Dentista', 'done':false},
-		{'title': 'Terminar exercicios de metodos', 'done':false},
+		{'title': 'Terminar exercícios de métodos', 'done':false},
 		{'title': 'Ligar para Ana', 'done':false}
 	];
 
@@ -15,7 +15,7 @@ controller('agendaController', ['$scope', function($scope){
 		$scope.itemDaAgenda = '';
 	}
 
-	//metodo para remover uma nova tarefa
+	//metodo para remover uma tarefa
 	$scope.removeTarefa = function() {
 		$scope.tarefas.splice(this.$index, 1);
 	}
