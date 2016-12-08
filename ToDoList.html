@@ -23,13 +23,20 @@
 		<p class="texto-status">Você possui {{tarefas.length}} tarefas cadastradas.</p>
 		<p class="texto-status">Você possui {{StatusTarefas()}} tarefas pendentes.</p>
 
+    <div id="menu">
+      <ul>
+		      <li><a href="javascript:mudaCorTexto('.texto-status')">Mudar cor do texto do status</a></li>
+		      <li><a href="javascript:mudaCorBackground('white')">Mudar cor do background</a></li>
+	   </ul>
+    </div>
+    <hr />
 	</div>
 
 
 	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="js/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="js/app.js"></script>
+  <script src="js/funcoes.js"></script>
   </body>
 
 </html>

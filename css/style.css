@@ -9,16 +9,20 @@ body {
   margin:0 auto;
 }
 
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+}
+
 ul {
     margin: 0;
     padding: 0;
 }
 
 ul li {
-    cursor: pointer;
-    position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
     font-size: 18px;
     transition: 0.2s;
 
@@ -64,28 +68,28 @@ border-radius: 4px;
 
 .botaoAdiciona:hover {
   background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.15));
-cursor: pointer;
+  cursor: pointer;
 }
 
 .botaoRemove {
-   background: #F65A5B ;
- color: #fff;
- cursor: pointer;
- display: inline-block;
- font-size: 15px;
-   line-height: 40px;
-   min-width: 40px;
-   height: 40px;
-   border-radius: 50%;
- margin: 0 -30px 0 40px;
-   text-align: center;
-   font-weight: 200;
-   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-   transition: background 500ms;
+  background: #F65A5B ;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 -30px 0 40px;
+  text-align: center;
+  font-weight: 200;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 500ms;
 }
 
 .botaoRemove:hover {
  color: #F65A5B ;
-   background: rgba(246, 90, 91, 0.25);
-   transition: background 500ms;
+ background: rgba(246, 90, 91, 0.25);
+ transition: background 500ms;
 }
